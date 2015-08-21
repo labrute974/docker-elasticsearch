@@ -1,0 +1,18 @@
+elasticsearch:
+  image: labrute974/elasticsearch
+  restart: always
+  dns: 172.17.42.1
+  dns_search:
+    - service.consul.
+    - node.consul.
+  volumes:
+    - "/mnt/sda1/var/lib/boot2docker/etc/hostname:/docker_hostname"
+  extra_hosts:
+    - "consul:172.17.42.1"
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  labels:
+    - "io.uworld.uspot.type=elasticsearch"
+  environment:
+    - "affinity:io.uworld.uspot.type!=elasticsearch"

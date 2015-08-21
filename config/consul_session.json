@@ -1,0 +1,7 @@
+{
+  "LockDelay": "15s",
+  "Name": "elasticsearch",
+  "Node": "<HOST>",
+  "Checks": [ "elasticsearch" ],
+  "Behavior": "delete"
+}

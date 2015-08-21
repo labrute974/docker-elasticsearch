@@ -1,0 +1,12 @@
+cluster:
+  name: docker-elasticsearch
+
+discovery.zen.minimum_master_nodes: 2
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.fd.ping_timeout: 15s
+
+path:
+  data: /elasticsearch/data
+  logs: /elasticsearch/logs
+  plugins: /elasticsearch/plugins
+  work: /elasticsearch/work
